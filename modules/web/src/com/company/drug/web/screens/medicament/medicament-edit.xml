@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.company.drug.web.screens.medicament">
+    <data>
+        <instance id="medicamentDc"
+                  class="com.company.drug.entity.Medicament"
+                  view="_local">
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="medicamentDc">
+            <column width="250px">
+                <textField id="medicamentNameField" property="medicamentName" required="true"/>
+                <textField id="releaseFormField" property="releaseForm"/>
+                <textField id="cipherField" property="cipher" required="true"/>
+                <dateField id="iBDField" property="iBD"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>
