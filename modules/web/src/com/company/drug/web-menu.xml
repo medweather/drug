@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
-    <menu id="application-drug" insertBefore="administration">
+    <menu id="references-drug" insertBefore="administration">
         <item screen="drug_Medicament.browse"/>
         <item screen="drug_Country.browse"/>
+    </menu>
+    <menu id="medicament-registration" insertBefore="references-drug">
+        <item screen="drug_StatusMedicamentRegistration.browse"/>
     </menu>
 </menu-config>

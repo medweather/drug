@@ -12,9 +12,9 @@
     </data>
     <dialogMode height="600"
                 width="800"/>
-    <layout expand="editActions" spacing="true">
+    <layout expand="editActions" spacing="true" margin="true" height="100%">
         <form id="form" dataContainer="medicamentDc">
-            <column width="250px">
+            <column width="300">
                 <textField id="medicamentNameField" property="medicamentName" required="true"/>
                 <textField id="releaseFormField" property="releaseForm"/>
                 <textField id="cipherField" property="cipher" required="true"/>

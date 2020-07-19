@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
 
+    <view entity="drug_StatusMedicamentRegistration" name="browse" extends="_local">
+        <property name="medicament" view="_minimal"/>
+        <property name="country" view="_minimal"/>
+        <property name="attachment" view="_minimal"/>
+    </view>
+
+    <view entity="drug_StatusMedicamentRegistration" name="edit" extends="_local">
+        <property name="medicament" view="_local"/>
+        <property name="country" view="_local"/>
+        <property name="attachment" view="_local"/>
+    </view>
 </views>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.company.drug.web.screens.statusmedicamentregistration">
+    <data>
+        <instance id="statusMedicamentRegistrationDc"
+                  class="com.company.drug.entity.StatusMedicamentRegistration"
+                  view="edit">
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true" margin="true" height="100%">
+        <form id="form" dataContainer="statusMedicamentRegistrationDc">
+            <column width="800">
+                <pickerField id="medicamentField" property="medicament" required="true" width="300">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </pickerField>
+                <textField id="releaseFormField" property="releaseForm" width="300"/>
+                <pickerField id="countryField" property="country" width="300">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </pickerField>
+                <textField id="numberRUField" property="numberRU" required="true" width="300"/>
+                <dateField id="dateRUField" property="dateRU" width="300"/>
+                <lookupField id="statusField" property="status" width="300"/>
+                <textArea id="indicationForUseField" property="indicationForUse"/>
+                <textArea id="sideEffectsField" property="sideEffects"/>
+                <upload id="attachmentUploadField" property="attachment" width="200"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowCommit"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

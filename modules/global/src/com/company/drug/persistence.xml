@@ -4,5 +4,6 @@
 
         <class>com.company.drug.entity.Medicament</class>
         <class>com.company.drug.entity.Country</class>
+        <class>com.company.drug.entity.StatusMedicamentRegistration</class>
     </persistence-unit>
 </persistence>
