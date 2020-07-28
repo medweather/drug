@@ -12,4 +12,5 @@
         <property name="country" view="_local"/>
         <property name="attachment" view="_local"/>
     </view>
+
 </views>
